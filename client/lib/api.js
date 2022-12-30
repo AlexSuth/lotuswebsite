@@ -1,4 +1,4 @@
-const API_URL = 'http://alexanders80.sg-host.com/graphql';
+const API_URL = 'https://alexanders80.sg-host.com/graphql';
 
 async function fetchAPI(query, { variables } = {}) {
   // Set up some headers to tell the fetch call
