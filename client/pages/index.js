@@ -1,20 +1,13 @@
-export default function Home({ tattoos }) {
+export default function Home({ homePages }) {
   return (
     <div className="text-white">
       <h1>
         NextJs Wordpress Test
       </h1>
-      {
-        tattoos.nodes.map(tattoo => {
-          return (
-            <ul key={tattoo.slug}>
-              <li>
-                {tattoo.tattooTitle}
-              </li>
-            </ul>
-          );
-        })
-      }
+      <p>
+        {homePages.nodes[0].homeCaption}
+      </p>
+    
     </div>
   );
 }
@@ -26,19 +19,10 @@ export async function getStaticProps() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `
-      query TattooQuery {
-        tattoos {
+      query HomeQuery {
+        homePages {
           nodes {
-            slug
-            tattooTitle
-            tattooId
-            tattooDisplayed
-            tattooDescription
-            tattooDate
-            tattooImages {
-              altText
-              sourceUrl
-            }
+            homeCaption
           }
         }
       }
@@ -49,7 +33,7 @@ export async function getStaticProps() {
   const json = await res.json();
   return {
     props: {
-      tattoos: json.data.tattoos
+      homePages: json.data.homePages
     },
   };
 }
