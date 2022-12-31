@@ -25,15 +25,15 @@ async function fetchAPI(query, { variables } = {}) {
 }
 
 export async function sendMail(subject, body, mutationId = 'contact') {
-  console.log('called')
-  const fromAddress = 'alexandernsutherland@gmail.com';
+  const fromAddress = 'noreply@yourwebsite.com';
   const toAddress = 'alexandernsutherland@gmail.com';
+  console.log('called')
   const data = await fetchAPI(
     `
 		mutation SendEmail($input: SendEmailInput!) {
 			sendEmail(input: $input) {
+				origin
 				message
-				origin  
 				sent
 			}
 		}
@@ -50,6 +50,8 @@ export async function sendMail(subject, body, mutationId = 'contact') {
       },
     }
   );
+
   console.log(data)
+
   return data?.sendEmail;
 }

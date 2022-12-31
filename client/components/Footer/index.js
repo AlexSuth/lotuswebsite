@@ -4,7 +4,7 @@ export default function Footer(){
     return (
       <div className="footerRoot">
         <footer className="bg-inherit">
-            <div className="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+            <div className="px-4 py-16 mx-auto sm:px-6 lg:px-8">
              <div className="mt-16">
               <ul className="flex justify-center gap-6 sm:justify-end">
                 <li>

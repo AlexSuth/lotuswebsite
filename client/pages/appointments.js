@@ -12,9 +12,8 @@ export default function Appointments() {
 
         const handleSubmit = async (evt) => {
             evt.preventDefault();
-            console.log('HELLO')
             const emailContent = `
-              Message received from <strong>${name}</strong>. 
+              Message received from <strong>${fullName}</strong>. 
               Their email address is <strong>${email}</strong>. <br />
               They'd like to know about...
               ${message}
@@ -23,6 +22,7 @@ export default function Appointments() {
               'New message from website contact form',
               emailContent
             );
+
         
             if (data.sent) {
               // email was sent successfully!
@@ -32,7 +32,7 @@ export default function Appointments() {
           };
 
     return (
-        <div className="text-white p-10 mt-20 border border-white md:max-w-[750px] max-w-[350px] mx-auto ">
+        <div className="text-white p-10 mt-6 border border-white md:max-w-[750px] max-w-[350px] mx-auto ">
             Please fill the form out below if you would like to schedule an appointment.
         <div className="mx-auto pt-10 w-full ">
             <form onSubmit={handleSubmit}>
@@ -92,16 +92,13 @@ export default function Appointments() {
                 className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-black outline-none focus:border-[#6A64F1] focus:shadow-md"
                 ></textarea>
             </div>
-            <div>
+            <div className='flex items-center justify-center'>
                 <button
                 type="submit" 
                 className="hover:shadow-form rounded-md bg-white py-3 px-8 text-base font-semibold text-black outline-none"
                 >
                 Submit
                 </button>
-                <input 
-                className="hover:shadow-form rounded-md bg-white py-3 px-8 text-base font-semibold text-black outline-none"
-                type="submit" value="Submit" />
             </div>
             </form>
 

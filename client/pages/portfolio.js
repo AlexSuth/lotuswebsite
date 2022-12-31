@@ -4,15 +4,15 @@ export default function Portfolio({tattoos}) {
     console.log(tattoos);
     
     const displayTattoos = 
-        <div className="grid p-8 md:grid-cols-4 gap-4">
+        <div className="grid p-8 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {tattoos.nodes.map((tattoo, index) =>
                 <TattooCard tattoo={tattoo} key={index}/>
             )}
         </div>
     
     return (
-        <div>
-        <div className="text-white text-center pb-16">            
+        <div className="pt-6">
+        <div className="text-white text-center pb-6">            
             Take a look at some of my favorite work!
         </div>
             {displayTattoos}

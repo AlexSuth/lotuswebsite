@@ -7,7 +7,7 @@ export default function Bio() {
                     >
                         <img
                         alt="Party"
-                        src="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/294493838_10159266682763402_3619832793550699762_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=g9od7-yUBaAAX9UGXrh&_nc_ht=scontent-sea1-1.xx&oh=00_AT-of3yr_91WSYhku3Tc1XcoKfwjk4-f150jtf9Ih1REGw&oe=63361F42"
+                        src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.6435-9/88175491_10157437610153402_2873478312393441280_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=wAKwI1-kopMAX-fMZYQ&_nc_ht=scontent-sea1-1.xx&oh=00_AfBu_qnTw2cIQHBuqG4EBfAY6OJ6slYYYltPSHYr_TljIA&oe=63D6C05D"
                         className="block inset-0 object-cover w-full h-full"
                         />
                     </div>
@@ -25,9 +25,9 @@ export default function Bio() {
                         atque tenetur quis eius quos ea neque sunt, accusantium soluta minus
                         veniam tempora deserunt? Molestiae eius quidem quam repellat.
                         </p>
-                        <div>
+                        <div className="flex items-center justify-center">
                             <button
-                            className="hover:shadow-form rounded-md bg-white py-3 mt-10 px-8 text-base font-semibold text-black outline-none"
+                            className="hover:shadow-form content-center rounded-md bg-white py-3 mt-10 px-8 text-base font-semibold text-black outline-none"
                             >
                             Book Appointment
                             </button>

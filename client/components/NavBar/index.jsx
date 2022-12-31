@@ -1,22 +1,14 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function NavBar() {
-
-  const [showMobileNav, setShowMobileNav] = useState(false);
-
-  const showHideMobileNav = () => {
-    setShowMobileNav(!showHideMobileNav);
-    console.log(showHideMobileNav);
-  };
-
+export default function NavBar({ closeNavBar, isNavOpen, toggleNavBar }) {
   return (
-    <div className="">
+    <div className="mx-auto w-full">
       {/* Logo */}
-      <header className="bg-inheret w-full">
-        <div className="px-4 mx-auto w-full sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex-1 md:flex md:items-center md:gap-12">
+      <header className="bg-inheret">
+        <div className="">
+          <div className="flex items-stretch justify-between h-16">
+            <div className="flex-1 md:flex md:items-stretch md:gap-12">
               <Link
                 href='/'
                 className="block text-slate-50 transition hover:text-slate-50/75">
@@ -44,16 +36,15 @@ export default function NavBar() {
                 <ul className="flex items-center text-sm gap-6">
                   <li>
                     <Link href="/" className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Home
-                      
+                      Home
+
                     </Link>
                   </li>
                   <li>
                     <Link href="/bio" className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Bio
-                      
+
+                      Bio
+
                     </Link>
                   </li>
 
@@ -61,18 +52,18 @@ export default function NavBar() {
                     <Link
                       href="/portfolio"
                       className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Portfolio
-                      
+
+                      Portfolio
+
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/appointments"
                       className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Book Appointment
-                      
+
+                      Book Appointment
+
                     </Link>
                   </li>
                 </ul>
@@ -81,7 +72,7 @@ export default function NavBar() {
               <div className="block md:hidden">
                 <button
                   className="p-2 text-slate-50 border-slate-50 rounded transition hover:text-slate-50/75"
-                  onClick={() => setShowMobileNav(!showMobileNav)}
+                  onClick={() => toggleNavBar()}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,42 +93,41 @@ export default function NavBar() {
             </div>
           </div>
 
-
-          {showMobileNav ?
+          {isNavOpen ?
             (
-              <div className="absolute md:hidden flex z-10  bg-black flex-col  text-sm text-gray-500">
-                <ul className='w-full'>
-                  <li>
+              <div className="absolute w-11/12 z-10 md:hidden bg-black pb-4">
+                <ul className=''>
+                  <li onClick={closeNavBar}>
                     <Link href="/" className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Home
-                      
+
+                      Home
+
                     </Link>
                   </li>
-                  <li>
+                  <li onClick={closeNavBar}>
                     <Link href="/bio" className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Bio
-                      
+
+                      Bio
+
                     </Link>
                   </li>
 
-                  <li>
+                  <li onClick={closeNavBar}>
                     <Link
                       href="/portfolio"
                       className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Portfolio
-                      
+
+                      Portfolio
+
                     </Link>
                   </li>
-                  <li>
+                  <li onClick={closeNavBar}>
                     <Link
                       href="/appointments"
                       className="text-slate-50 transition hover:text-slate-50/75">
-                      
-                        Book Appointment
-                      
+
+                      Book Appointment
+
                     </Link>
                   </li>
                 </ul>
@@ -145,18 +135,8 @@ export default function NavBar() {
             ) :
             <></>
           }
-
-
-
-
         </div>
-
       </header >
-
-
-
-
-
     </div >
   );
 }

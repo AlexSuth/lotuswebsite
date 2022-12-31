@@ -1,8 +1,8 @@
 export default function Home({ homePages }) {
   return (
-    <div className="text-white">
-      <h1>
-        NextJs Wordpress Test
+    <div className=" text-white w-10/12">
+      <h1 className="mb-4 text-3xl md:text-center content-center">
+        Welcome to Lotus Ink
       </h1>
       <p>
         {homePages.nodes[0].homeCaption}
