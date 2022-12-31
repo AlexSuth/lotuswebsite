@@ -1,6 +1,6 @@
 export default function Bio() {
     return (
-                <div className="text-white max-w-screen-xl px-4 py-16 mx-auto sm:px-6  lg:px-8">
+                <div className="text-white max-w-screen-xl px-4 py-6 mx-auto sm:px-6  lg:px-8">
                     <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
                     <div
                         className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last"

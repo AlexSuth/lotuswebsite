@@ -1,6 +1,6 @@
 export default function Home({ homePages }) {
   return (
-    <div className=" text-white w-10/12">
+    <div className="text-white w-10/12">
       <h1 className="mb-4 text-3xl md:text-center content-center">
         Welcome to Lotus Ink
       </h1>
