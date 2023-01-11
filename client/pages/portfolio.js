@@ -22,7 +22,7 @@ export default function Portfolio({tattoos}) {
 
 export async function getStaticProps() {
 
-    const res = await fetch('http://alexanders80.sg-host.com/graphql', {
+    const res = await fetch(process.env.WORDPRESS_API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -2,7 +2,9 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { sendMail } from '../lib/api'
+import { sendMail } from '../lib/api';
+
+import ContactForm from '../components/ContactForm';
 
 export default function Appointments() {
     const [fullName, setFullName] = useState('');
@@ -10,26 +12,24 @@ export default function Appointments() {
     const [message, setMessage] = useState('');
     const router = useRouter();
 
-        const handleSubmit = async (evt) => {
-            evt.preventDefault();
-            const emailContent = `
-              Message received from <strong>${fullName}</strong>. 
-              Their email address is <strong>${email}</strong>. <br />
-              They'd like to know about...
-              ${message}
-            `;
-            const data = await sendMail(
-              'New message from website contact form',
-              emailContent
-            );
 
-        
-            if (data.sent) {
-              // email was sent successfully!
-              router.push('/');
-              console.log('sent');
-            }
-          };
+    const handleSubmit = (e) => { 
+        e.preventDefault()
+        console.log('Sending')
+      let data = {
+          name,
+          email,
+          message
+        }
+      fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+      };
 
     return (
         <div className="text-white p-10 mt-6 border border-white md:max-w-[750px] max-w-[350px] mx-auto ">

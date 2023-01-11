@@ -30,13 +30,21 @@ export async function sendMail(subject, body, mutationId = 'contact') {
   console.log('called')
   const data = await fetchAPI(
     `
-		mutation SendEmail($input: SendEmailInput!) {
-			sendEmail(input: $input) {
-				origin
-				message
-				sent
-			}
-		}
+    mutation SEND_EMAIL {
+      sendEmail(
+      input: {
+      to: “test@test.com”
+      from: “test@test.com”
+      subject: “test email”
+      body: “test email”
+      clientMutationId: “test”
+      }
+      ) {
+      origin
+      sent
+      message
+      }
+      }
 	`,
     {
       variables: {
