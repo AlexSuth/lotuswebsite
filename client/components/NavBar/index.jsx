@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function NavBar({ closeNavBar, isNavOpen, toggleNavBar }) {
   return (

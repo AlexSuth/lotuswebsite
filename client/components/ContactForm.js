@@ -1,36 +1,29 @@
-// components/ContactForm.js
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-import React, { useState } from "react";
-import axios from "axios";
-import { useForm } from "react-hook-form";
+export const ContactForm = () => {
+  const form = useRef();
 
-export default function ContactForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { isSubmitting },
-  } = useForm();
-  const [successMessage, setSuccessMessage] = useState("");
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  function onSubmit(data) {
-    axios
-      .post("<YOUR PIPEDREAM WORKFLOW URL>", data)
-      .then((response) => {
-        setSuccessMessage(
-          `Thanks for signing up! Check your inbox for updates 😊`
-        );
-      })
-      .catch((e) => console.error(e));
-  }
+    emailjs.sendForm('service_4i1h92s', 'template_sh10blr', form.current, 'AosknvJFTxvo5Wffi')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <h4>Join our newsletter!</h4>
-
-      <input className="text-black "{...register("email")} defaultValue="me@gmail.com"></input>
-
-      <button role="submit">{isSubmitting ? "Submitting" : "Submit"}</button>
-      {successMessage && <p>{successMessage}</p>}
+    <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
     </form>
   );
-}
+};
