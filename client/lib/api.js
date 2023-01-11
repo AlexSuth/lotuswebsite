@@ -27,7 +27,7 @@ async function fetchAPI(query, { variables } = {}) {
 export async function sendMail(subject, body, mutationId = 'contact') {
   const fromAddress = 'noreply@yourwebsite.com';
   const toAddress = 'alexandernsutherland@gmail.com';
-  console.log('called')
+  console.log('called');
   const data = await fetchAPI(
     `
     mutation SEND_EMAIL {
@@ -59,7 +59,7 @@ export async function sendMail(subject, body, mutationId = 'contact') {
     }
   );
 
-  console.log(data)
+  console.log(data);
 
   return data?.sendEmail;
 }

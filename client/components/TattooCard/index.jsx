@@ -1,13 +1,15 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 export default function TattooCard({ tattoo }) {
 
   return (
-    <div class="flex justify-center">
-      <div class="rounded-lg shadow-lg max-w-sm">
+    <div className="flex justify-center">
+      <div className="rounded-lg shadow-lg max-w-sm">
         <a href="#!">
-          <img class="rounded-t-lg" src={tattoo.tattooImages[0].sourceUrl} alt="" />
+          <img className="rounded-t-lg" src={tattoo.tattooImages[0].sourceUrl} alt="" />
         </a>
-        <div class="p-6 text-white">
-          <h5 class="text-center text-white text-xl font-medium">{tattoo.tattooTitle}</h5>
+        <div className="p-6 text-white">
+          <h5 className="text-center text-white text-xl font-medium">{tattoo.tattooTitle}</h5>
         </div>
       </div>
     </div>

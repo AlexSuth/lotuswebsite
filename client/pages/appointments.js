@@ -1,12 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */   
 import { useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { sendMail } from '../lib/api';
 import emailjs from '@emailjs/browser';
-
-
-
 
 export default function Appointments() {
   const [isSuccess, setIsSuccess] = useState(false);

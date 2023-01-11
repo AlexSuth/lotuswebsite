@@ -1,8 +1,10 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Footer from '../Footer';
 import NavBar from '../NavBar';
 
 import { useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 export default function Layout({ children }) {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
