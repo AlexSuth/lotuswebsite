@@ -30,7 +30,9 @@ export default function Bio() {
             <button
               className="hover:shadow-form content-center rounded-md bg-white py-3 mt-10 px-8 text-base font-semibold text-black outline-none"
             >
+              <a href='/appointments'>
                             Book Appointment
+              </a>
             </button>
           </div>
         </div>

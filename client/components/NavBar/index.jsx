@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function NavBar({ closeNavBar, isNavOpen, toggleNavBar }) {
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto w-full md:w-11/12">
       {/* Logo */}
       <header className="bg-inheret">
         <div className="">
