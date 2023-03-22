@@ -9,6 +9,7 @@ import { Gallery, Item } from 'react-photoswipe-gallery';
 
 
 export default function Portfolio({ tattoos }) {
+  console.log(process.env.NEXT_PUBLIC_WORDPRESS_API)
   return (
     <Gallery>
       <div className="grid p-8 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -33,7 +34,7 @@ export default function Portfolio({ tattoos }) {
 export async function getStaticProps() {
 
   // eslint-disable-next-line no-undef
-  const res = await fetch(process.env.WORDPRESS_API, {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

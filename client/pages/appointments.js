@@ -6,11 +6,17 @@ export default function Appointments() {
   const [isSuccess, setIsSuccess] = useState(false);
   // eslint-disable-next-line no-undef
   const form = useRef();
+  const serviceID = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID;
+  const templateID = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID;
+  const secretID = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_ID;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_4i1h92s', 'template_sh10blr', form.current, 'AosknvJFTxvo5Wffi')
+    console.log (serviceID);
+
+
+    emailjs.sendForm(serviceID, templateID, form.current, secretID)
       .then((result) => {
         console.log(result.text);
         setIsSuccess(true);

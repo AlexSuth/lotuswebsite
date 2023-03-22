@@ -1,5 +1,3 @@
-const API_URL = 'https://alexanders80.sg-host.com/graphql';
-
 async function fetchAPI(query, { variables } = {}) {
   // Set up some headers to tell the fetch call
   // that this is an application/json type
@@ -8,7 +6,7 @@ async function fetchAPI(query, { variables } = {}) {
   // build out the fetch() call using the API_URL
   // environment variable pulled in at the start
   // Note the merging of the query and variables
-  const res = await fetch(API_URL, {
+  const res = await fetch(process.env.WORDPRESS_API, {
     method: 'POST',
     headers,
     body: JSON.stringify({ query, variables })
