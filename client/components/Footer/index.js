@@ -8,7 +8,7 @@ export default function Footer(){
         <div className="px-4 py-4 mx-auto sm:px-6 lg:px-8">
           <div className="mt-16">
             <ul className="flex justify-center gap-6 ">
-              <li>
+              {/* <li>
                 <a
                   href="/"
                   rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export default function Footer(){
                     />
                   </svg>
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="http://www.instagram.com/anastasialotustats"
@@ -52,7 +52,7 @@ export default function Footer(){
                   </svg>
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="/"
                   rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export default function Footer(){
                     />
                   </svg>
                 </a>
-              </li>
+              </li> */}
               
             </ul>
 
