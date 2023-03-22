@@ -6,7 +6,7 @@ async function fetchAPI(query, { variables } = {}) {
   // build out the fetch() call using the API_URL
   // environment variable pulled in at the start
   // Note the merging of the query and variables
-  const res = await fetch(process.env.WORDPRESS_API, {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API, {
     method: 'POST',
     headers,
     body: JSON.stringify({ query, variables })
