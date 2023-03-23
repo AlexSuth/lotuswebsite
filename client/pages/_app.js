@@ -3,9 +3,9 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import { Lora } from 'next/font/google'
+import { Lora } from 'next/font/google';
 
-const lora = Lora({ subsets: ['latin'] })
+const lora = Lora({ subsets: ['latin'] });
 function MyApp({ Component, pageProps }) {
   return (
     <div className='w-screen'>

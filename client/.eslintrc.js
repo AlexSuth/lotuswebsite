@@ -6,6 +6,7 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'plugin:@next/next/recommended',
+    'parser:babel-eslint'
   ],
   'overrides': [
   ],
