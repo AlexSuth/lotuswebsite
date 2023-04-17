@@ -3,9 +3,9 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import { Lora } from 'next/font/google';
+import { Josefin_Sans } from 'next/font/google';
 
-const lora = Lora({ subsets: ['latin'] });
+const josefinSans = Josefin_Sans({ subsets: ['latin'] });
 function MyApp({ Component, pageProps }) {
   return (
     <div className='w-screen'>
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/lotuslogo.jpg" />
       </Head>
       <Layout>
-        <main className={lora.className}>
+        <main className={josefinSans.className}>
           <Component {...pageProps} />
         </main>
       </Layout>

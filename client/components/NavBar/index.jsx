@@ -52,9 +52,7 @@ export default function NavBar({ closeNavBar, isNavOpen, toggleNavBar }) {
                     <Link
                       href="/appointments"
                       className="text-slate-50 transition hover:text-slate-50/75">
-
                       Book Appointment
-
                     </Link>
                   </li>
                 </ul>
@@ -116,9 +114,7 @@ export default function NavBar({ closeNavBar, isNavOpen, toggleNavBar }) {
                     <Link
                       href="/appointments"
                       className="text-slate-50 transition hover:text-slate-50/75">
-
                       Book Appointment
-
                     </Link>
                   </li>
                 </ul>

@@ -30,16 +30,16 @@ export default function Footer(){
                   </svg>
                 </a>
               </li> */}
-              <li>
+              {/* <li>
                 <a
                   href="http://www.instagram.com/anastasialotustats"
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="text-slate-50 transition hover:text-slate-50/75"
+                  className=" transition hover:text-slate-50/75"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
-                    className="w-10 h-10"
+                    className="text-black w-10 h-10"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -50,8 +50,9 @@ export default function Footer(){
                       clipRule="evenodd"
                     />
                   </svg>
+                  
                 </a>
-              </li>
+              </li> */}
               {/* <li>
                 <a
                   href="/"
