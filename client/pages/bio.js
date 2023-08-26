@@ -22,7 +22,7 @@ export default function Bio() {
             <img
               alt="Anastasia Lotus"
               src="http://alexanders80.sg-host.com/wp-content/uploads/2023/01/322726234_583181956983020_3392654797384454977_n.jpg"
-              className="block inset-0 object-cover w-full h-full"
+              className="block rounded-md inset-0 object-cover w-full h-full"
             />
           </div>
 
